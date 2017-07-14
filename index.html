@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>search-app</title>
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Search App</h2>
+      </header>
+      <!-------------------------------- search form -------------------------------->
+      <form id="search-form" class="form inline-form" action="javascript:;">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input id="query-input" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button id="" class="btn btn-deafult" type="submit"><i class="fa fa-search fa-fw"></i>Search</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-------------------------------- loading spinner -------------------------------->
+      <div id="loading-spinner-div" class="row" style="display:none">
+        <div id="spinner-div" class="col-lg-12">
+          <i class="fa fa-spinner fa-spin"></i> Loading ...
+        </div>
+      </div>
+      <!----------------------------- search results container --------------------------->
+      <div class="row">
+        <div id="search-result-div" class="col-lg-12"></div>
+      </div>
+    </div>
+
+    <!-- templates -->
+    <!--------------------------------start----------------------------------->
+    <div id="hidden-result-template"  class="result-div" style='display:none'>
+      <hr/>
+      <h4 class="title"></h3>
+      <div class="brief">
+        <div class="text"></div>
+        <button class="btn btn-sm btn-default show-more-btn">Show More</button>
+      </div>
+      <div class="description"  style='display:none'>
+        <div class="text"></div>
+        <button class="btn btn-sm btn-default show-less-btn">Show Less</button>
+      </div>
+    </div>
+    <!---------------------------------end----------------------------------->
+
+    <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./libs/tether/dist/js/tether.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/sample-response.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
