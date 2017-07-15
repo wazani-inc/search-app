@@ -59,7 +59,7 @@ var UI = {
     $template.attr("id", item["_source"]["Title"]).show();
     $template.find(".title").text(item["_source"]["Title"]);
     $template.find(".brief .text").text(String(item["_source"]["Description"]).substring(0, 100) + "...");
-    $template.find(".description .text").text(item["_source"]["Description"]);
+    $template.find(".description .text").text(item["_source"]["Description"].join("\n"));
     return $template;
   }
 }
